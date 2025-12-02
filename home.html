@@ -95,21 +95,21 @@
         <section>
             <h3>Workout Table</h3>
 
-            <table border="1" cellpadding="8">
+            <table id="workoutTable" border="1" cellpadding="8">
                 <tr>
                     <th>Exercise</th>
                     <th>Reps/Sets</th>
-                    <th>Difficulty</th>
+                    <th>Rest Time</th>
                 </tr>
                 <tr>
                     <td>Push Ups</td>
                     <td>3 x 12</td>
-                    <td>Medium</td>
+                    <td>30 sec</td>
                 </tr>
                 <tr>
                     <td>Squats</td>
                     <td>3 x 15</td>
-                    <td>Easy</td>
+                    <td>1:30 min</td>
                 </tr>
             </table>
         </section>
@@ -118,16 +118,20 @@
     <article id="AddWorkout">
         <section>
 
-            <form class="form">
+            <form class="form" onsubmit="return addExercise()">
                 <fieldset>
                     <legend>Add Your Exercise</legend>
-                    <label>Exercise Name: <input type="text" placeholder="Plank..."> </label><br>
+                    <label>Exercise Name: <input type="text" id="exName" placeholder="Plank..."> </label><br>
                     <br>
 
-                    <label>Reps / Sets: <input type="text" placeholder="2 x 5"> </label><br>
+                    <label>Reps / Sets: <input type="text" id="exReps" placeholder="2 x 5"> </label><br>
+                    <br>
+                    <label>Rest Time: <input type="text" id="exRest" placeholder="30 sec"> </label><br>
                     <br>
 
                     <input type="submit" value="Add Exercise">
+                    <input type="reset" value="Reset" onclick="clearTable()">
+
                 </fieldset>
             </form>
         </section>
@@ -188,6 +192,7 @@
     <footer>
         © Workout Tracker
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

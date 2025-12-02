@@ -49,17 +49,18 @@
     <div class="login-box">
         <h2>Login</h2>
 
-        <form>
-            <fieldset>
+
+        <form onsubmit="return validateLogin()">
+                <fieldset>
                 <legend>Login to your account</legend>
 
                 <label>Email:<br>
-                    <input type="email" id="email" placeholder="example@gmail.com" required>
+                    <input type="email" id="email" placeholder="example@gmail.com" >
                 </label>
                 <br><br>
 
                 <label>Password:<br>
-                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <input type="password" id="password" placeholder="Enter your password" >
                 </label>
                 <br><br>
 
@@ -72,6 +73,34 @@
         </p>
     </div>
 
+    <p id="loginMsg"></p>
+
+
+<script>
+function validateLogin() {
+
+    var email = document.getElementById("email").value;
+    var pass  = document.getElementById("password").value;
+
+    if (email == "") {
+        alert("Email cannot be empty.");
+        return false;
+    }
+
+    if (pass == "") {
+        alert("Password cannot be empty.");
+        return false;
+    }
+
+    if (pass.length < 6) {
+        alert("Password must be at least 6 characters.");
+        return false;
+    }
+
+    alert("Login successful!");
+    return false;
+}
+</script>
 
 </body>
 
