@@ -30,7 +30,7 @@ table, .info-box, figure {
     width: fit-content;
 }
 
-form {
+.form {
     width: 100%;
     margin: auto;
     background: #5f919e;
