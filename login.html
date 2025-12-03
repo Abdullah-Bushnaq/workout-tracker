@@ -21,14 +21,6 @@
             text-align: center;
             margin-bottom: 10px;
         }
-
-        .project-img {
-            border: 2px solid black;
-            width: 120px;
-            margin: 10px auto;
-            display: block;
-            cursor: pointer;
-        }
     </style>
 </head>
 
@@ -49,32 +41,36 @@
     <div class="login-box">
         <h2>Login</h2>
 
+        <div class="container-flex">
+                <figure>
+                    <img src="AboutUs.png" width="120" usemap="#aboutMap">
+                    <map name="aboutMap">
+                        <area shape="rect" coords="0,0,120,120" href="about.html">
+                    </map>
+                    <figcaption>About Us</figcaption>
+                </figure>
 
-        <form onsubmit="return validateLogin()">
-                <fieldset>
-                <legend>Login to your account</legend>
+                <form onsubmit="return validateLogin()">
+                    <fieldset>
+                        <legend>Login to your account</legend>
 
-                <label>Email:<br>
-                    <input type="email" id="email" placeholder="example@gmail.com" >
-                </label>
-                <br><br>
+                        <label>Email:<br>
+                            <input type="email" id="email" placeholder="example@gmail.com">
+                        </label>
+                        <br><br>
 
-                <label>Password:<br>
-                    <input type="password" id="password" placeholder="Enter your password" >
-                </label>
-                <br><br>
+                        <label>Password:<br>
+                            <input type="password" id="password" placeholder="Enter your password">
+                        </label>
+                        <br><br>
 
-                <input type="submit" value="Login">
-            </fieldset>
-        </form>
-
-        <p style="text-align:center; margin-top:10px;">
-            Don’t have an account? <a href="signup.html">Create one</a>
-        </p>
+                        <input type="submit" value="Login">
+                    </fieldset>
+                </form>
+        </div>
     </div>
 
     <p id="loginMsg"></p>
-
 
 <script>
 function validateLogin() {

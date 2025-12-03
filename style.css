@@ -74,3 +74,15 @@ article {
     margin: 20px auto;
     display: block;
 }
+.container-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+.container-flex figure {
+    flex: 1;
+    text-align: center;
+}
+.container-flex form {
+    flex: 2;
+}
