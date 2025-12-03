@@ -142,7 +142,7 @@
 
 
     <article id="DailyFeeling">
-        <form class="form">
+        <form class="form" onsubmit="return validateSurvey()">
             <fieldset>
                 <legend>How was your workout today?</legend>
 
@@ -181,7 +181,7 @@
                 <label>Comments:</label><br>
                 <textarea rows="3" cols="40" placeholder="Write your feedback..."></textarea><br><br>
 
-                <input type="submit" value="Send Review">
+                <input type="submit" value="Send Review" onclick="return checkSurvey();">
 
             </fieldset>
 

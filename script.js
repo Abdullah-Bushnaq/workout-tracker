@@ -102,3 +102,8 @@ function clearTable() {
     alert("Table cleared!");
 
 }
+
+function checkSurvey() {
+    alert("Please answer the questions before submitting.");
+    return false;
+}
